@@ -4,7 +4,9 @@ import java.util.List;
 
 import rafsapp.com.opentune.JSON_Models.Marca;
 import rafsapp.com.opentune.JSON_Models.Room;
+import rafsapp.com.opentune.JSON_Models.RoomSchedule;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
@@ -14,6 +16,6 @@ import retrofit2.http.POST;
 
 public interface GerritAPI {
 
-    @POST
-    Call<List<Room>> loadRooms();
+    @POST("getrooms")
+    Call<List<Room>> loadRooms(@Body RoomSchedule schedule);
 }

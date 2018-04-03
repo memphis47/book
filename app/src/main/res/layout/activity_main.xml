@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
     tools:context="rafsapp.com.opentune.MainActivity">
 
-    <ListView
-        android:id="@+id/lv_rooms"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="fill_parent"
-        android:cacheColorHint="#00000000">
-    </ListView>
+        android:layout_margin="3pt"
+        android:orientation="horizontal">
 
-</android.support.constraint.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/day_before_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:background="#ffffff"
+            android:onClick="beforeDate"
+            android:src="@drawable/less_button" />
+
+        <TextView
+            android:id="@+id/time_text"
+            tools:text="23.04.2019"
+            android:textSize="28dp"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical" />
+
+        <ImageButton
+            android:id="@+id/day_after_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="#ffffff"
+            android:onClick="afterDate"
+            android:src="@drawable/greater" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

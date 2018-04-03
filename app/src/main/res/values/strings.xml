@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">opentune</string>
-    <string name="selecione_marca">Selecione uma marca</string>
+    <string name="room_name">Room\'s Name</string>
+    <string name="room_size">Room\'s Size</string>
 </resources>
